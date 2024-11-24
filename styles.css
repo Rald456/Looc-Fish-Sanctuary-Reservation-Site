@@ -1,0 +1,273 @@
+.c-item {
+    height: 100vh; /* Allow height to adjust automatically */
+}
+.c-img {
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area without distortion */
+    filter: brightness(0.6);
+}
+
+*{
+margin: 0;
+padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    z-index: 1000; 
+}
+.header-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.8rem;
+}
+h1 {
+    margin: 0;
+    color: #fff;
+    margin-left: 30px;
+}
+.profile-container{
+    margin-right: 20px;
+}
+
+#body{
+    background-image: url('1.jpg');
+    background-position: center;
+    background-size: cover; /* Use cover for full background fill */
+    background-repeat: no-repeat; /* Prevent repetition */
+}
+
+footer {
+    background-color: #343434; /* Customize color as needed */
+    color: white;
+    padding-top: 50px;
+    font-size: 16px;
+}
+.footer-container {
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2px;
+}
+.footer-content {
+    flex: 1;
+    min-width: 300px;
+    margin: 2px;
+    text-align: center;
+}
+footer h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+.footer-content p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+.footer-content ul {
+    padding: 0;
+    list-style: none;
+}
+.link-list li {
+    margin: 10px 0;
+    position: relative;
+}
+.link-list li::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #f18930;
+    transition: width 0.3s;
+}
+.link-list li:hover::before {
+    width: 70px;
+}
+.link-list a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+.link-list a:hover {
+    color: #f18930;
+}
+.social-icons {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+.social-icons li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.social-icons a {
+    color: white;
+    font-size: 25px;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: #f18930;
+}
+.bottom-bar {
+    background: #f18930;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+.bottom-bar p {
+    color: #343434;
+    margin: 0;
+}
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-content {
+        margin: 20px 0;
+    }
+}
+
+.sanctuary-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.about {
+    font-size: 35px;
+    color: #ffffff;
+    margin-top: 40px;
+}
+
+.about-text {
+    font-size: 19px;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+.fa{
+    display: inline-block;
+    color: rgb(230, 0, 38);
+    border-right: 1px solid#fff;
+    padding: 8px;
+    margin-left: 8px;
+}
+
+#submit-btn {
+    width: 100%; /* Make the button take the full width of the container */
+    max-width: 300px; /* Optional: Set a max width for larger screens */
+    margin: 0 auto; /* Center the button */
+}
+
+.modal-body {
+    max-height: 400px; /* Set a max height for the modal body */
+    overflow-y: auto;  /* Enable vertical scrolling */
+}
+
+/* Change the text color of the checkbox label to white */
+.form-check-label {
+    color: white;
+}
+
+/* Ensure the right side border-radius matches for the municipality input */
+.form-control {
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+}
+
+
+/*margin to the checkbox to position it below the municipality field */
+.checkbox-label {
+    margin: 15px 0;
+}
+
+/*style for check details button and timestamp*/
+.reservation-item {
+    position: relative;
+}
+
+.timestamp {
+    margin-top: 5px; /* Space between button and timestamp */
+    font-size: 0.7em;
+    color: #1bade7;
+    }
+
+/* Additional styling for the input group */
+.input-group {
+    margin-bottom: 1px; /* Adds space between input groups */
+}
+
+/*Back button*/
+#backToCheckActivities {
+    border: none;
+    background: none;
+    font-size: 25px;
+    color: #6c757d; 
+    cursor: pointer;
+}
+#backToCheckActivities:hover {
+    color: #000; /* Color on hover */
+}
+
+#customConfirmModal .modal-dialog {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cancel-btn {
+    position: absolute; /* Position the button */
+    bottom: 15px; /* Adjust as necessary */
+    right: 10px; /* Adjust as necessary */
+}
+
+/* Dim effect for the background modal(check details) when CustomConfirmModal appears */
+.modal-dim {
+    opacity: 0.5; /* Adjust opacity to dim the modal */
+    pointer-events: none; /* Disable interaction with the dimmed modal */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Center the question text in the modal */
+#customConfirmModal .modal-body .question-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5px; /* Space between question and radio buttons */
+    font-size: 20px;
+}
+
+/* Style the radio buttons and add dividers between them */
+.radio-group {
+    margin-top: 10px;
+    margin-bottom: 10px; /* Space between each radio button */
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px; /* Space between radio button and label */
+}
+
+/* Divider between radio buttons */
+.divider {
+    border-top: 1px solid #e9ecef;
+    margin: 10px 0; /* Add space above and below the divider */
+}
+
+/* Add padding for the textarea */
+#customReason {
+    margin-top: 10px;
+    padding: 5px;
+}
+
